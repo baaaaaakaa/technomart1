@@ -12,6 +12,16 @@
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://malsup.github.io/jquery.form.js"></script> 
+  <script> 
+    // wait for the DOM to be loaded 
+    $(document).ready(function() { 
+        // bind 'myForm' and provide a simple callback function 
+        $('#myForm').ajaxForm(function() { 
+            alert("Thank you for your comment!"); 
+        }); 
+    }); 
+</script> 
 </head>
 
 <body>
@@ -427,7 +437,7 @@
   <section class="popup popup-feedback">
     <h2 class="visually-hidden">Обратная связь</h2>
 
-    <form class="feedback flex-container" id="feedback">
+    <form class="feedback flex-container" id="myForm">
       <p>
         <label for="feedback-name">Ваше имя:</label>
         <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
@@ -450,7 +460,7 @@
     </form>
 
     <div class="popup__bottom">
-      <button class="button button_red" type="submit" form="feedback">Отправить</button>
+      <button class="button button_red" type="submit" form="myForm">Отправить</button>
     </div>
 
     <button class="popup__close popup-close" type="button">Закрыть</button>
@@ -463,6 +473,6 @@
         var p = d.location.protocol == "https:" ? "https://" : "http://";
         var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
         var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
-    })(window, document, 'script', 'cloud.roistat.com', 'cb3bf5cf1589707ad71a6b2a5e7635df');
+    })(window, document, 'script', 'cloud.roistat.com', '8be0bc627e239bb4f8b74894d36af7d0');
     </script>
 </body></html>
