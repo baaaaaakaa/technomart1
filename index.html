@@ -488,6 +488,26 @@
        };
   </script>
 
+  <!-- BEGIN ROISTAT A/B TEST -->
+<script>
+  window.onRoistatModuleLoaded = function () {
+     window.roistat.registerAbTestCallback(7, function (variant) {
+        switch (variant) {
+          case "old":
+          console.log ('1')
+              break;
+          case "new":
+          console.log ('2')
+              break;
+          case "control":
+          console.log ('3')
+              break;
+        }
+     });
+  };
+  </script>
+  <!-- END ROISTAT A/B TEST -->
+
   <script>
     (function(w, d, s, h, id) {
         w.roistatProjectId = id; w.roistatHost = h;
