@@ -533,6 +533,7 @@
   </script>
   <!-- END ROISTAT A/B TEST -->
 
+<!-- Roistat Counter Start -->
 <script>
   (function(w, d, s, h, id) {
       w.roistatProjectId = id; w.roistatHost = h;
@@ -541,12 +542,7 @@
       var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
   })(window, document, 'script', 'cloud.roistat.com', 'd5e920396b192a0b9ca83094f0fc2868');
   </script>
-
-<script>
-  window.onRoistatMultiwidgetInited = function() {
-    console.log(JSON.parse(JSON.stringify(window.roistat.multiwidget)));
-  };
-  </script>
+  <!-- Roistat Counter End -->
 
 <script src="//code.jivo.ru/widget/zSZMTGrNwA" async></script> 
 
